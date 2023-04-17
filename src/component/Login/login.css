@@ -1,0 +1,13 @@
+.div{
+    margin: 30px auto;
+  }
+  .div input{
+      width: 260px;
+      height: 20px;
+  }
+  .reg-btn{
+      background-color: rgb(91, 91, 233);
+      height: 30px;
+      width: 200px;
+      border: none;
+  }
