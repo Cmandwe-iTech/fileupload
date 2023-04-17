@@ -41,18 +41,11 @@ file_router.get("/fileupload", async (req, res) => {
 });
 file_router.put("/fileupload/:id", async(req, res)=>{
   try{
-    const fileById = await Filemodel.findOne({_id:req.params.id})
-    if(fileById){
     const update = await Filemodel.updateOne({_id:req.params.id}, {$set:{name:req.body.name}})
     res.status(200).json({
       status:"ok",
       update
     })
-  }else{
-    res.status(404).json({
-      status:"file does not found with this id"
-    })
-  }
   }catch(e){
     message:e.message
   }
@@ -60,17 +53,10 @@ file_router.put("/fileupload/:id", async(req, res)=>{
 
 file_router.delete("/fileupload/:id", async(req, res)=>{
   try{
-    const fileById = await Filemodel.findOne({_id:req.params.id})
-    if(fileById){
     await Filemodel.deleteOne({_id:req.params.id})
     res.status(204).json({
       status:"ok",
     })
-  }else{
-    res.status(404).json({
-      status:"file does not found with this id"
-    })
-  }
   }catch(e){
     message:e.message
   }
