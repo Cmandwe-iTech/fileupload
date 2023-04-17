@@ -1,3 +1,4 @@
+
 #main-home-div {
   width: 100vw;
   height: auto;
@@ -64,9 +65,12 @@ main {
 }
 
 main #img-div {
-  width: 30%;
+  width: 28%;
   border: 1px solid black;
   margin-bottom: 2%;
+  background: rgb(161, 211, 231);
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px rgb(233, 104, 242);
 }
 .div1{
     height: 30%;

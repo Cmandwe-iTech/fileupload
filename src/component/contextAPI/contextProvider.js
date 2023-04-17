@@ -17,16 +17,13 @@ const ContextProvider = (props) => {
     axios
       .post("https://fileuploading.onrender.com/register", reg_data)
       .then((res) => {
-        console.log(res.status);
-        if (res.status === 201) {
+        if (res.status === 200) {
           alert(`registered successfully`);
           navigate("/");
-        } else if (res.status === 403) {
-          alert(`user already exist`);
         }
       })
       .catch((e) => {
-        console.log(e);
+        alert(e.message);
       });
   };
 
@@ -63,8 +60,8 @@ const ContextProvider = (props) => {
         if (res.status === 200) {
           setData(res.data.files);
           navigate("/home");
-        }else{
-            navigate("/")
+        } else {
+          navigate("/");
         }
       })
       .catch((e) => {

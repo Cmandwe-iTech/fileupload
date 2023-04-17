@@ -37,6 +37,8 @@ const Register = () => {
         padding: "30px",
         textAlign: "center",
         position: "relative",
+        background:"blue",
+        color:"white"
       }}
     >
       <h3>Register</h3>

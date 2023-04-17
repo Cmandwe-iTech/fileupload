@@ -3,7 +3,6 @@ import uploadContext from "../contextAPI/context";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Modal, ModalBody, ModalHeader } from "reactstrap";
-
 import "./upload.css";
 
 const HomePage = () => {

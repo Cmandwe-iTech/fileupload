@@ -8,7 +8,7 @@ const Login = () => {
     }
     return (
 
-        <div style={{ "width": "300px", "height": "auto", "boxShadow": "5px 5px 5px #cccc", "margin": "100px auto", borderRadius: "20px", padding: "30px", textAlign: "center", "position": "relative" }}>
+        <div style={{ "width": "300px", "height": "auto", "boxShadow": "5px 5px 5px #cccc","background":"skyblue", "margin": "100px auto", borderRadius: "20px", padding: "30px", textAlign: "center", "position": "relative" }}>
             <h3>Login</h3>
             <div className="email div">
                 <label htmlFor="em">Email</label>
