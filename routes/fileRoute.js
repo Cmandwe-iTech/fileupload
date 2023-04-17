@@ -14,7 +14,7 @@ file_router.post("/fileupload", uploader.single("file"), async (req, res) => {
       file: upload.secure_url,
       user: req.user,
     });
-    res.status(200).json({
+    res.status(201).json({
       status: "success",
       files,
     });
@@ -29,17 +29,10 @@ file_router.post("/fileupload", uploader.single("file"), async (req, res) => {
 file_router.get("/fileupload", async (req, res) => {
   try {
     const files = await Filemodel.find({ user: req.user });
-    if (files.length) {
       res.status(200).json({
         status: "success",
         files,
       });
-    } else {
-      res.status(404).json({
-        status: "failed",
-        message: "page not found",
-      });
-    }
   } catch (error) {
     res.json({
       message: error.message,
