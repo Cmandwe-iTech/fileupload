@@ -1,5 +1,7 @@
 .div{
     margin: 30px auto;
+    background: skyblue;
+    box-shadow: 5px 5px 5px rosybrown;
   }
   .div input{
       width: 260px;
