@@ -8,9 +8,7 @@ const Register = () => {
   const RegisterData = () => {
     if (validateUser) {
       RegisterSubmit();
-    }else{
-      alert("fill valid credential")
-    }
+    } 
   };
   let validateUser = (value) => {
     if (!value.email) {
@@ -39,8 +37,8 @@ const Register = () => {
         padding: "30px",
         textAlign: "center",
         position: "relative",
-        background:"blue",
-        color:"white"
+        background: "blue",
+        color: "white",
       }}
     >
       <h3>Register</h3>
@@ -68,6 +66,7 @@ const Register = () => {
         <label htmlFor="confirm">Confirm Password</label>
         <input
           type="password"
+          id="confirm"
           onChange={(e) => {
             setConfirm(e.target.value);
           }}
