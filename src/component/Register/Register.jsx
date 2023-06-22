@@ -8,6 +8,8 @@ const Register = () => {
   const RegisterData = () => {
     if (validateUser) {
       RegisterSubmit();
+    }else{
+      alert("fill valid credential")
     }
   };
   let validateUser = (value) => {
