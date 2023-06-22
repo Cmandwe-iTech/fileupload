@@ -17,7 +17,7 @@ const ContextProvider = (props) => {
     axios
       .post("https://fileuploading.onrender.com/register", reg_data)
       .then((res) => {
-        if (res.status === 200) {
+        if (res.status === 201) {
           alert(`registered successfully`);
           navigate("/");
         }
